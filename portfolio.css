@@ -54,6 +54,10 @@ header{
     justify-content: space-between;
 }
 
+.noskills{
+    border-bottom: 3px solid black;
+}
+
 li:not(:first-of-type) {
     margin-top: 1.25em;
 }
@@ -130,4 +134,90 @@ li:not(:last-of-type) {
 .slider--control:active{
     background-color: rgba(0.2, 0.2, 0.2, 0.4);
     border: 1px solid black;
+}
+
+/* Style all font awesome icons */
+/* .fa {
+    padding: 15px;
+    font-size: 10px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 25%;
+    border: 2px solid black;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }
+} */
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+
+@mixin transformScale($size: 1) {
+    transform: scale($size);
+    -ms-transform: scale($size);
+    -webkit-transform: scale($size);
+}
+
+.social-container {
+    width: 400px;
+    margin: 40vh auto;
+    text-align: center;
+}
+
+.social-icons {
+    padding: 0;
+    list-style: none;
+    margin: 1em;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin: 0.15em;
+    position: relative;
+    font-size: 1.2em;
+}
+
+.social-icons i {
+    color: #fff;
+    position: absolute;
+    top: 21px;
+    left: 21px;
+    transition: all 265ms ease-out;
+}
+
+a {
+    display: inline-block;
+}     
+
+a::before {
+    transform: scale();
+    -ms-transform: scale();
+    -webkit-transform: scale();
+    content: " ";
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: block;
+    background: linear-gradient(45deg, #00B5F5, #002A8F);
+    transition: all 265ms ease-out;
+}
+        
+a:hover::before {
+        transform: scale(0);
+        transition: all 265ms ease-in;
+}
+        
+a:hover i {
+    transform: scale(2.2);
+    -ms-transform: scale(2.2);
+    -webkit-transform: scale(2.2);
+    color: #00B5F5;
+    background: -webkit-linear-gradient(45deg, #00B5F5, #002A8F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 265ms ease-in;
 }
