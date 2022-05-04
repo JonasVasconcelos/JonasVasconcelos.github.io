@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+/*   font-family: Arial;
+ */  padding: 10px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.page-header {
+  /* padding: 30px; */
+  text-align: center;
+  /* background-image: linear-gradient(90deg, rgba(81, 255, 0, 0.5), rgba(0, 0, 255, 0.5)); */
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.page-header img{
+  width: 8%;
+  /* border: 1px solid black; */
+  height: auto;
+  
+}
+
+main p{
+  font-size: 1.35rem;
+}
+
+h6{
+  padding: 10px;
+}
+
+.jonas{
+  align-self: center;
+  font-size: 5px;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 14pt;
+  padding-top: 10px;
+  text-transform: uppercase;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.DOI{
+  text-decoration: underline;
+  color: blue;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.rightcolumn-about {
+  float: left;
+  width: 50%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.leftcolumn-about {   
+  float: left;
+  width: 50%;
+}
+
+.portfolioimg{
+  background-image: url('./portfolio.png');
+  background-size: cover;
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.card img{
+  width: 100%;
+  height: fit-content;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .page-header img {   
+    width: 10%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .page-header img {   
+    width: 12%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .page-header img {   
+    width: 14%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .page-header{   
+    display: block;
+  }
+  .page-header img{
+    width: 25%;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
