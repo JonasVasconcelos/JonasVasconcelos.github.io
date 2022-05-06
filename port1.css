@@ -5,26 +5,37 @@
 }
 
 body {
-/*   font-family: Arial;
- */  padding: 10px;
+  padding: 10px;
   background: #f1f1f1;
 }
 
-/* Header/Blog Title */
 .page-header {
-  /* padding: 30px; */
   text-align: center;
-  /* background-image: linear-gradient(90deg, rgba(81, 255, 0, 0.5), rgba(0, 0, 255, 0.5)); */
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: center;
 }
 
-.page-header img{
-  width: 8%;
-  /* border: 1px solid black; */
+.page-header img {
+  width: 4rem;
   height: auto;
-  
+}
+
+.page-header h5 {
+  font-size: 1.25rem;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+nav a{
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 main p{
@@ -47,9 +58,11 @@ h6{
   text-transform: uppercase;
 }
 
-a{
-  text-decoration: none;
-  color: black;
+.flex{
+  text-align: left;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-basis: 500px;
 }
 
 .DOI{
@@ -75,36 +88,11 @@ a{
   height: 100%;
 }
 
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
 .leftcolumn {   
   float: left;
   width: 75%;
 }
 
-/* Right column */
 .rightcolumn {
   float: left;
   width: 25%;
@@ -158,14 +146,6 @@ a{
   margin-top: 20px;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-
 @media screen and (max-width: 850px) {
   .page-header img {   
     width: 10%;
@@ -173,11 +153,20 @@ a{
   }
 }
 
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+
 @media screen and (max-width: 700px) {
   .page-header img {   
     width: 12%;
     padding: 0;
   }
+ 
 }
 @media screen and (max-width: 600px) {
   .page-header img {   
