@@ -46,14 +46,13 @@ h6{
   padding: 10px;
 }
 
-.jonas{
-  align-self: center;
-  font-size: 5px;
+h2{
+  text-align: center;
 }
 
 .title{
   font-weight: bold;
-  font-size: 14pt;
+  font-size: 1.2rem;
   padding-top: 10px;
   text-transform: uppercase;
 }
@@ -68,12 +67,37 @@ h6{
   height: 100%;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 50px;
+  font-size: 1.25rem;
+  justify-items: center;
+  align-items: stretch;
+}
+
+.flexcard{
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.item2 {
+  grid-row: 1 / span 2;
+  grid-column: 2;
+}
+
+.imgcard{
+  width: 100%;
+}
+
 .DOI{
   text-decoration: underline;
   color: blue;
 }
 
-.container {
+.container-iframe {
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -126,11 +150,19 @@ h6{
   background-color: white;
   padding: 20px;
   margin-top: 20px;
+  border-radius: 26px;
+  background: #ffffff;
+  box-shadow:  10px 10px 20px #787878,
+               -10px -10px 20px #ffffff;
 }
 
-.card img{
+.img{
   width: 100%;
   height: fit-content;
+}
+
+li{
+  list-style-type: none;
 }
 
 /* Clear floats after the columns */
@@ -146,6 +178,13 @@ h6{
   text-align: center;
   background: #ddd;
   margin-top: 20px;
+}
+
+
+@media screen and (max-width: 1000px) {
+  .grid{
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media screen and (max-width: 850px) {
@@ -168,12 +207,21 @@ h6{
     width: 12%;
     padding: 0;
   }
+  .grid {
+    display: flex;  
+    flex-direction: column; 
+    justify-content: space-evenly;
+
+  }
  
 }
 @media screen and (max-width: 600px) {
   .page-header img {   
     width: 14%;
     padding: 0;
+  }
+  .flexcard{
+    flex-direction: column;
   }
 }
 
